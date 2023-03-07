@@ -68,8 +68,15 @@ html > body .toastui-editor-contents pre {
   <ul class="list">
     <li>
       <a href="javascript:;" onclick="showPage(this);" class="block p-2 hover:text-red-500 flex gap-2">
+        <span>6</span>
+        <span class="mr-auto underline">다이어그램과 자바</span>
+        <span>2023-03-07</span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" onclick="showPage(this);" class="block p-2 hover:text-red-500 flex gap-2">
         <span>5</span>
-        <span class="mr-auto underline">uml 예시</span>
+        <span class="mr-auto underline">db select</span>
         <span>2023-03-07</span>
       </a>
     </li>
@@ -179,6 +186,15 @@ html > body .toastui-editor-contents pre {
     }
 
     $('.list > li:first-child > a').click();
+
+    const params = new URL(document.location).searchParams;
+    const paramId = params.get("id");
+
+    if ($('.data-id-' + paramId).length == 1) {
+      $('.data-id-' + paramId).parent().click();
+    } else {
+      $('.list > li:first-child > a').click();
+    }
   </script>
 
 </body>
