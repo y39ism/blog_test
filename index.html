@@ -181,7 +181,7 @@ html > body .toastui-editor-contents pre {
       $('.current-page-subject').html(subject);
       $('.current-page-createDate').html(createDate);
 
-      fetch(pageNo + ".md")
+      fetch(pageNo + ".md?id="+pageNo)
         .then(response => response.text()) // 응답에서 본문만 취한다.
         .then(text => {
           viewer1.setMarkdown(text);
