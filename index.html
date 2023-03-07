@@ -136,8 +136,8 @@ function katexPlugin() {
 
 // id가 'viewer-1-template' 인 엘리먼트를 찾는다.
 const viewer1TemplateEl = document.querySelector("#viewer-1-template");
-const viewer1MarkdownSource = stripIndent(viewer1TemplateEl.innerHTML); // 포함하고 있는 내용
-
+//const viewer1MarkdownSource = stripIndent(viewer1TemplateEl.innerHTML); // 포함하고 있는 내용
+viewer1MarkdownSource = "로딩중";
 console.log("viewer1MarkdownSource : " + viewer1MarkdownSource);
 
 const viewer1 = Editor.factory({
